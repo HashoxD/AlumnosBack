@@ -23,10 +23,11 @@ public class AlumnosController{
 	ArrayList<Alumno> listaAlumnos = new ArrayList();
 
 	public AlumnosController() {
-		listaAlumnos.add(new Alumno(1, "Camilo", 24));
-		listaAlumnos.add(new Alumno(2, "Amanda", 24));
-		listaAlumnos.add(new Alumno(3, "Tomás", 25));
-		listaAlumnos.add(new Alumno(4, "Sandra", 22));
+		listaAlumnos.add(new Alumno(1, "Camilo", 22));
+		listaAlumnos.add(new Alumno(2, "Amanda", 17));
+		listaAlumnos.add(new Alumno(3, "Tomás", 18));
+		listaAlumnos.add(new Alumno(4, "Sandra", 19));
+		listaAlumnos.add(new Alumno(5, "Hitler", 15));
 	}
 	
 	@CrossOrigin
