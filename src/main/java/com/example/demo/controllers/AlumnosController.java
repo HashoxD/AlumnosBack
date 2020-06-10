@@ -44,9 +44,8 @@ public class AlumnosController{
 	@CrossOrigin
 	@RequestMapping(value = "/agregarAlumno", method = RequestMethod.POST,
     produces = MediaType.APPLICATION_JSON_VALUE)
-	public Response agregarAlumno(@RequestBody String json) {
+	public Response agregarAlumno(@RequestBody Alumno alumno) {
 		try {
-			Alumno alumno = new Gson().fromJson(json, Alumno.class);
 			if(existeAlumno(alumno))
 				return new Response("201", "ERROR", "El alumno con ID "+alumno.getId()+" ya está registrado.");
 			listaAlumnos.add(alumno);
@@ -59,9 +58,8 @@ public class AlumnosController{
 	@CrossOrigin
 	@RequestMapping(value = "/modificarAlumno", method = RequestMethod.POST,
     produces = MediaType.APPLICATION_JSON_VALUE)
-	public Response modificarAlumno(@RequestBody String json) {
+	public Response modificarAlumno(@RequestBody Alumno alumno) {
 		try {
-			Alumno alumno = new Gson().fromJson(json, Alumno.class);
 			for(int i = 0; i<listaAlumnos.size(); i++) {
 				if(listaAlumnos.get(i).getId() == alumno.getId()) {
 					listaAlumnos.get(i).setAlumno(alumno);
